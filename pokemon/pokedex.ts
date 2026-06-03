@@ -1,6 +1,5 @@
 const container: HTMLElement = document.getElementById("pokedex")!;
 //vou fazer com os pokemon que eu gosto porra
-//https://codesandbox.io/p/sandbox/typescript-pokedex-yluzs?file=%2Fsrc%2Findex.ts
 
 interface IPokemon{
     numero: number; //tentei usar os msms nomes do desenho
@@ -22,7 +21,7 @@ const mostraPokemon = (pokemon: IPokemon): void =>{
 
 const getPokemon = async (numero: number): Promise<void> =>{
  const data: Response = await fetch('https://pokeapi.co/api/v2/pokemon/${numero}'); //possivelmente vai dar erro
- const pokemon: any = await data json();
+ const pokemon: any = await data json('');
  const pokemonType : string = pokemon.tipos
                         .map((poke: any) => poke.tipo.nome)
                         .join(", ");
@@ -32,9 +31,9 @@ const transformPokemon = {
     numero: pokemon.numero,
     nome: pokemon.nome,
     image: `${pokemon.sprites.front_default}`,
-    tipo: pokemonTipo
+    tipo: pokemonType
 };
-    showPokemon(transformPokemon);
+    showPokemon: (transformPokemon);//foi????
 };
 
     const fetchData = (): void => {
