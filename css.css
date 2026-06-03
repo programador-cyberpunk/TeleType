@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
-
+@import url('https://fonts.cdnfons.com/css/pokemon-solid');
+@import url('');
 *{
     margin: 10px;
     top: 10px;
     border: 0px;
     padding: 0px;
     box-sizing:border-box;
+}
 
-    
+body{
+    background-color: #333;
+    line-height: 1.5px;
+    font-family: 
 }
