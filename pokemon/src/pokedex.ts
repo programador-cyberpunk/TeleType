@@ -3,7 +3,7 @@ const container: HTMLElement = document.getElementById("pokedex")!;
 
 interface IPokemon{
     numero: number; //tentei usar os msms nomes do desenho
-    nome: string;
+    name: string;
     type: string;
     image: string;
     lore: string;
@@ -12,8 +12,8 @@ interface IPokemon{
 const mostraPokemon = (pokemon: IPokemon): void =>{
     let output: string = `<div class ="card">
     <span class="card--numero">#${pokemon.numero}</span>
-    <img class="card--image" src=${pokemon.image} alt=${pokemon.nome}/>
-    <h1 class = "card--name">${pokemon.nome}</h1>
+    <img class="card--image" src=${pokemon.image} alt=${pokemon.name}/>
+    <h1 class = "card--name">${pokemon.name}</h1>
     <span class="card--details">${pokemon.type}</span>
     </div>`;
     container.innerHTML += output;
