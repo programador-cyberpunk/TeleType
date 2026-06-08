@@ -1,7 +1,7 @@
 const container: HTMLElement = document.getElementById("pokedex")!;
 //vou fazer com os pokemon que eu gosto porra
 
-interface IPokemon{
+export interface IPokemon{
     numero: number; //tentei usar os msms nomes do desenho
     name: string;
     type: string;
